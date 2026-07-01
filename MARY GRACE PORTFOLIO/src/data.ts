@@ -13,7 +13,7 @@ export const profileData: ProfileConfig = {
     'Admin Manager',
     'Virtual Assistant'
   ],
-  photoUrl: profileImage, 
+ photoUrl: profileImage,
   email: 'marygracebelangel26@gmail.com',
   phone: '+63 998 475 7817',
   whatsapp: '+639984757817'
