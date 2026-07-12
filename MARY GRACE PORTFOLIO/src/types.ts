@@ -3,7 +3,7 @@ export interface PortfolioItem {
   title: string;
   platform: 'instagram' | 'facebook' | 'tiktok' | 'youtube' | 'meta' | 'brand';
   category: string; // 'Reel Cover' | 'Promo Post' | 'Carousel' | 'Story Template' | 'Ad Creative'
-  filter: 'brand-kits' | 'graphic-design' | 'video' | 'promo';
+  filter: 'brand-kits' | 'graphic-design' | 'video' | 'promo' | 'web-design';
   caption: string;
   metrics?: string; // e.g. "24% higher CTR" or "150K+ plays"
   accentColor: string; // teal or matching colors for the custom graphic representation
@@ -15,6 +15,7 @@ export interface PortfolioItem {
   };
   imageUrl?: string;
   videoUrl?: string;
+  liveUrl?: string;
 }
 
 export interface WorkExperienceItem {

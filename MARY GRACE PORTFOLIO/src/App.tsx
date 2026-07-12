@@ -13,10 +13,22 @@ import SmmWorkflow from './components/SmmWorkflow';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 import CursorGlow from './components/CursorGlow';
+import IntroSplash from './components/IntroSplash';
 import { profileData } from './data';
 
 export default function App() {
   const [activeView, setActiveView] = useState<string>('home');
+  const [hasEntered, setHasEntered] = useState<boolean>(false);
+  const [isExiting, setIsExiting] = useState<boolean>(false);
+
+  const handleEnter = () => {
+    if (isExiting) return;
+    setIsExiting(true);
+    // Let the fade-out animation play before mounting the main site
+    setTimeout(() => {
+      setHasEntered(true);
+    }, 480);
+  };
 
   useEffect(() => {
     // Dynamically set the browser favicon ("small logo") to her profile photo
@@ -63,7 +75,15 @@ export default function App() {
   };
 
   return (
-    <div className="bg-[#0A0A0A] text-[#F5F5F5] min-h-screen selection:bg-[#14B8A6]/30 selection:text-[#14B8A6] overflow-x-hidden antialiased relative flex flex-col justify-between">
+    <>
+      {!hasEntered && (
+        <div className={isExiting ? 'animate-fade-out' : ''}>
+          <IntroSplash onEnter={handleEnter} />
+        </div>
+      )}
+
+      {hasEntered && (
+    <div className="bg-[#0A0A0A] text-[#F5F5F5] min-h-screen selection:bg-[#14B8A6]/30 selection:text-[#14B8A6] overflow-x-hidden antialiased relative flex flex-col justify-between animate-fade-in">
       {/* Interactive cursor follow glow */}
       <CursorGlow />
 
@@ -128,5 +148,7 @@ export default function App() {
       {/* Floating Scroll to Top - Only shown on section pages */}
       {activeView !== 'home' && <BackToTop />}
     </div>
+      )}
+    </>
   );
 }

@@ -1,9 +1,18 @@
 import { PortfolioItem, WorkExperienceItem, ToolItem, CertificationItem, TestimonialItem, ProfileConfig } from './types';
-import profileImage from './assets/images/profile_headshot_yellow_1782874094145.jpg';
-import lumeBrandKit from './assets/images/lume_lash_studio_brand_kit_new_1782881825605.jpg';
-import revfitBrandKit from './assets/images/revfit_brand_kit_real_image_1782881305605.jpg';
-import therapyDogsCarouselKit from './assets/images/therapy_dogs_carousel_kit_1782882264161.jpg';
+import profileImage from './assets/images/profile_headshot_yellow_new.jpg';
+import lumeBrandKit from './assets/images/lume_brand_kit_new.png';
+import aftBrandKit from './assets/images/aft_brand_kit.jpg';
+import revfitBrandKit from './assets/images/revfit_brand_kit_new.png';
+import therapyDogsCarouselKit from './assets/images/therapy_dogs_carousel_new.png';
 import revfitExcusesCarouselKit from './assets/images/revfit_excuses_carousel_kit_1782882907778.jpg';
+import pushupChallengeTeam from './assets/images/pushup_challenge_team.jpg';
+import evoltScanPromo from './assets/images/evolt_scan_promo.jpg';
+import aftGymBag from './assets/images/aft_gym_bag.jpg';
+import bookNextSession from './assets/images/book_next_session.jpg';
+import aftWelcomePromo from './assets/images/aft_welcome_promo.jpg';
+import bookDoulaWebinarCampaign from './assets/images/book_doula_webinar_campaign.jpg';
+import socialEdgeCreativeCover from './assets/images/social_edge_creative_cover.jpg';
+import maryLandingPageCover from './assets/images/mary_landing_page_cover.jpg';
 
 export const profileData: ProfileConfig = {
   name: 'Mary Grace Belangel',
@@ -11,9 +20,11 @@ export const profileData: ProfileConfig = {
     'Social Media Manager',
     'Meta Ads Manager',
     'Admin Manager',
-    'Virtual Assistant'
+    'Virtual Assistant',
+    'Web Designer & Portfolio Site Maker',
+    'Digital Products Creator'
   ],
- photoUrl: profileImage,
+  photoUrl: profileImage, 
   email: 'marygracebelangel26@gmail.com',
   phone: '+63 998 475 7817',
   whatsapp: '+639984757817'
@@ -55,6 +66,23 @@ export const portfolioItems: PortfolioItem[] = [
     imageUrl: revfitBrandKit
   },
   {
+    id: 'port-brand-aft',
+    title: 'Brand Kit — Active Fitness Tamworth',
+    platform: 'brand',
+    category: 'Brand Kits',
+    filter: 'brand-kits',
+    caption: 'Complete gym brand kit for Active Fitness Tamworth including color palette, typography, brand voice guidelines, logo usage, photography style, social media templates, highlight covers, CTA style, and hashtag strategy.',
+    metrics: 'Active Project',
+    accentColor: '#5DC6D4',
+    visualStyle: {
+      gradient: 'from-[#121212] via-[#5DC6D4]/10 to-[#121212]',
+      patternType: 'grid',
+      primaryIcon: 'Sparkles',
+      badgeText: 'Featured Project'
+    },
+    imageUrl: aftBrandKit
+  },
+  {
     id: 'port-carousel-therapydogs',
     title: 'Carousel Post — Therapy Dogs NSW',
     platform: 'instagram',
@@ -89,6 +117,91 @@ export const portfolioItems: PortfolioItem[] = [
     imageUrl: revfitExcusesCarouselKit
   },
   {
+    id: 'port-pushup-challenge',
+    title: 'Event Poster — The Push-Up Challenge',
+    platform: 'instagram',
+    category: 'Event Poster',
+    filter: 'graphic-design',
+    caption: 'Bold dual-brand event poster designed for Active Fitness Tamworth and REVFIT\'s joint Push-Up Challenge fundraiser, driving team sign-ups with high-contrast typography and dynamic sport photography.',
+    metrics: 'Featured Project',
+    accentColor: '#5CC4EE',
+    visualStyle: {
+      gradient: 'from-[#121212] via-[#5CC4EE]/10 to-[#121212]',
+      patternType: 'grid',
+      primaryIcon: 'TrendingUp',
+      badgeText: 'Event Poster'
+    },
+    imageUrl: pushupChallengeTeam
+  },
+  {
+    id: 'port-evolt-promo',
+    title: 'Promo Graphic — EVOLT Body Scan',
+    platform: 'instagram',
+    category: 'Promo Post',
+    filter: 'graphic-design',
+    caption: 'Sleek dual-branded promotional graphic for Active Fitness Tamworth and REVFIT\'s EVOLT 360 body composition scan service, engineered to drive same-day scan bookings.',
+    metrics: 'Featured Project',
+    accentColor: '#14B8A6',
+    visualStyle: {
+      gradient: 'from-[#121212] via-[#14B8A6]/10 to-[#121212]',
+      patternType: 'grid',
+      primaryIcon: 'Percent',
+      badgeText: 'Promo Post'
+    },
+    imageUrl: evoltScanPromo
+  },
+  {
+    id: 'port-aft-bag',
+    title: 'Product Post — AFT Gym Bag',
+    platform: 'instagram',
+    category: 'Product Post',
+    filter: 'graphic-design',
+    caption: 'Modern typographic product post designed for the Active Fitness Tamworth branded gym bag, built with bold oversized type and a clean teal-and-black brand palette to drive merchandise orders.',
+    metrics: 'Featured Project',
+    accentColor: '#5CC4EE',
+    visualStyle: {
+      gradient: 'from-[#121212] via-[#5CC4EE]/10 to-[#121212]',
+      patternType: 'grid',
+      primaryIcon: 'Sparkles',
+      badgeText: 'Product Post'
+    },
+    imageUrl: aftGymBag
+  },
+  {
+    id: 'port-book-session',
+    title: 'Promo Post — Book Your Next Session',
+    platform: 'instagram',
+    category: 'Promo Post',
+    filter: 'graphic-design',
+    caption: 'On-location gym photography paired with bold call-to-action typography for Active Fitness Tamworth, designed to drive PT session bookings with clear contact details layered over the image.',
+    metrics: 'Featured Project',
+    accentColor: '#3B82F6',
+    visualStyle: {
+      gradient: 'from-[#121212] via-[#3B82F6]/10 to-[#121212]',
+      patternType: 'grid',
+      primaryIcon: 'Calendar',
+      badgeText: 'Promo Post'
+    },
+    imageUrl: bookNextSession
+  },
+  {
+    id: 'port-aft-welcome',
+    title: 'Welcome Graphic — AFT New Member Promo',
+    platform: 'instagram',
+    category: 'Promo Post',
+    filter: 'graphic-design',
+    caption: 'Warm, on-brand welcome graphic for new Active Fitness Tamworth members who signed up to the $9.95 promo, pairing gym photography with a free training plan offer to boost early engagement.',
+    metrics: 'Featured Project',
+    accentColor: '#14B8A6',
+    visualStyle: {
+      gradient: 'from-[#121212] via-[#14B8A6]/10 to-[#121212]',
+      patternType: 'grid',
+      primaryIcon: 'Heart',
+      badgeText: 'Promo Post'
+    },
+    imageUrl: aftWelcomePromo
+  },
+  {
     id: 'port-reels-collection',
     title: 'Short-Form Reels & Video Collection',
     platform: 'tiktok',
@@ -120,39 +233,44 @@ export const portfolioItems: PortfolioItem[] = [
       patternType: 'waves',
       primaryIcon: 'Calendar',
       badgeText: 'Webinar Promo'
-    }
+    },
+    imageUrl: bookDoulaWebinarCampaign
   },
   {
-    id: 'port-5',
-    title: 'Meta Ads Conversion Creative',
-    platform: 'meta',
-    category: 'Ad Creative',
-    filter: 'promo',
-    caption: 'Conversion-optimized Meta ad creative designed for an international consulting business, engineered to trigger immediate scroll-stopping interest and drive warm leads.',
-    metrics: '4.8% CTR (Avg)',
+    id: 'port-web-design-social-edge',
+    title: 'Website — Social Edge Creative',
+    platform: 'brand',
+    category: 'Web Design',
+    filter: 'web-design',
+    caption: 'A fully custom, modern portfolio website built and designed from the ground up for Social Edge Creative — clean navigation, responsive layout, and a design that reflects the brand perfectly. Click through to view the live site.',
+    metrics: 'Live Website',
     accentColor: '#14B8A6',
     visualStyle: {
-      gradient: 'from-teal-950/70 via-neutral-900 to-neutral-950',
+      gradient: 'from-[#121212] via-[#14B8A6]/10 to-[#121212]',
       patternType: 'grid',
-      primaryIcon: 'TrendingUp',
-      badgeText: 'Meta Ads'
-    }
+      primaryIcon: 'Globe',
+      badgeText: 'Live Site'
+    },
+    liveUrl: 'https://socialedgecreativeservices.netlify.app/',
+    imageUrl: socialEdgeCreativeCover
   },
   {
-    id: 'port-9',
-    title: 'Meta Retargeting Campaign Visual',
-    platform: 'meta',
-    category: 'Ad Creative',
-    filter: 'promo',
-    caption: 'Dynamic retargeting graphic focused on overcoming custom purchase objections, engineered to recapture warm abandoned carts and drive strong conversion rates.',
-    metrics: '5.2x ROAS',
-    accentColor: '#14B8A6',
+    id: 'port-web-design-mary-landing',
+    title: 'Landing Page — Portfolio Sites for VAs & Small Business',
+    platform: 'brand',
+    category: 'Web Design',
+    filter: 'web-design',
+    caption: 'A bold, conversion-focused landing page sample built to show VAs and small business owners why a static PDF resume is no longer enough — designed to drive portfolio site bookings.',
+    metrics: 'Landing Page',
+    accentColor: '#EC4899',
     visualStyle: {
-      gradient: 'from-teal-950/80 via-neutral-950 to-neutral-900',
+      gradient: 'from-[#121212] via-[#EC4899]/10 to-[#121212]',
       patternType: 'grid',
-      primaryIcon: 'Percent',
-      badgeText: 'Retargeting'
-    }
+      primaryIcon: 'Globe',
+      badgeText: 'Sample Page'
+    },
+    liveUrl: 'https://portfoliocreationbiz.netlify.app/',
+    imageUrl: maryLandingPageCover
   }
 ];
 
@@ -342,6 +460,15 @@ export const testimonialsList: TestimonialItem[] = [
     testimonial: 'Mary Grace has been an indispensable part of my team. She handled our book publication and webinar launch campaigns flawlessly, managing social scheduling, podcast tracks, and outreach marketing materials. Her organization and system tracking kept us completely on target.',
     rating: 5,
     avatarInitials: 'VB'
+  },
+  {
+    id: 'test-social-edge',
+    name: 'Social Edge Creative',
+    role: 'Founder',
+    company: 'Social Edge Creative',
+    testimonial: 'I can\u2019t recommend Mary highly enough! From the very beginning, she was friendly, professional, and genuinely cared about bringing my vision for Social Edge Creative to life.\n\nShe created a portfolio website that perfectly reflects my brand and exceeded my expectations. The design is modern, clean, easy to navigate, and showcases my work exactly how I imagined. Mary was always quick to respond, open to feedback, and happy to make any changes along the way, making the whole process stress-free.\n\nIf you\u2019re looking for someone to create a beautiful, professional website with outstanding customer service, Mary is the person to go to. Thank you again for all your hard work\u2014I absolutely love the final result and look forward to working with you again in the future!',
+    rating: 5,
+    avatarInitials: 'SE'
   }
 ];
 
